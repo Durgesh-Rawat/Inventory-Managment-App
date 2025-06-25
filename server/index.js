@@ -26,7 +26,7 @@ const schema = new mongoose.Schema({
   status: String,
 });
 
-const model = mongoose.model("model", schema);
+const model = mongoose.model("Project", schema, "Project");
 
 // ✅ Middleware to protect routes
 const verifyToken = (req, res, next) => {
