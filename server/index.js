@@ -53,6 +53,7 @@ app.get('/product', async (req, res) => {
   res.json(userItem);
 });
 
+
 // POST new product
 app.post('/product', async (req, res) => {
   try {
