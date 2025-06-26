@@ -9,7 +9,7 @@ function AppSignIn(){
     const navigate = useNavigate();
     
      const handleSignup = async () => {
-         const res = await fetch('http://localhost:5002/auth/signup',{
+         const res = await fetch('https://first-backend-deployment-nhp9.onrender.com/auth/signup',{
                  method: 'POST',
                  headers: { 'Content-Type': 'application/json' },
                  body: JSON.stringify({ email, password }),
