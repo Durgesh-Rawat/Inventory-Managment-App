@@ -17,7 +17,7 @@ function AppDashboard({ item, setItem }){
 
 
    useEffect(() => {
-      fetch("http://localhost:5002/product")
+      fetch("https://first-backend-deployment-nhp9.onrender.com/product")
       .then( res => res.json())
       .then(data => setItem(data))
       .catch(err => console.error("failed to fetch product:",err));
@@ -30,7 +30,7 @@ function AppDashboard({ item, setItem }){
       e.preventDefault();
      if(!name || !Quantity || !price || !category || !status) return;
 
-     fetch("http://localhost:5002/product",{
+     fetch("https://first-backend-deployment-nhp9.onrender.com/product",{
        method: "POST",
        headers: { 
          "Content-Type": "application/json",
