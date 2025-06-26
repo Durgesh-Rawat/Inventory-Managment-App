@@ -36,7 +36,7 @@ function ProductList({ item, setItem }) {
 
 
   useEffect(() => {
-  fetch("http://localhost:5002/product", {
+  fetch("https://first-backend-deployment-nhp9.onrender.com/product", {
     headers: {
       Authorization: `Bearer ${localStorage.getItem('token')}`,
     }
@@ -49,7 +49,7 @@ function ProductList({ item, setItem }) {
 
   // Save updated product
   const saveEdit = () => {
-    fetch(`http://localhost:5002/product/${editingId}`, {
+    fetch(`https://first-backend-deployment-nhp9.onrender.com/product/${editingId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ function ProductList({ item, setItem }) {
 
   // Delete product
   const deleteProduct = (id) => {
-    fetch(`http://localhost:5002/product/${id}`, {
+    fetch(`https://first-backend-deployment-nhp9.onrender.com/product/${id}`, {
       method: 'DELETE'
     })
       .then(() => {
