@@ -10,7 +10,7 @@ function AppLogin() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5002/auth/login', {
+      const res = await fetch('https://first-backend-deployment-nhp9.onrender.com/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
