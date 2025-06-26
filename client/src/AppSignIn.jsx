@@ -8,9 +8,6 @@ function AppSignIn(){
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     
-  if (!email.includes("@") || password.length < 6) {
-    alert("Please enter a valid email and a password of at least 6 characters.");
-    return;
   }
      const handleSignup = async () => {
          const res = await fetch('http://localhost:5002/auth/signup',{
