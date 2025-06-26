@@ -8,7 +8,6 @@ function AppSignIn(){
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     
-  }
      const handleSignup = async () => {
          const res = await fetch('http://localhost:5002/auth/signup',{
                  method: 'POST',
