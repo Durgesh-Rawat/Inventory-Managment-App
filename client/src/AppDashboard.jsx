@@ -37,7 +37,11 @@ function AppDashboard({ item, setItem }){
           "Authorization": `Bearer ${localStorage.getItem('token')}`
        },
        body: JSON.stringify({name,Quantity,price,category,status}),
-     }).then(res => res.json())
+     }).then(console.log("Fetch headers:", {
+  "Content-Type": "application/json",
+  "Authorization": `Bearer ${localStorage.getItem("token")}`
+});
+).then(res => res.json())
      .then(
             newProduct => {setItem((prevItems) => [...prevItems, newProduct]);
         });
